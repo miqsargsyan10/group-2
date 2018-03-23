@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <stdlib.h>
 
 void welcomeToGame(){
     std::cout << "Hellooo my friend...Let's play Chinga-Chung...The game ends when you or Pc already have 3 points...C'mon!! \n";
