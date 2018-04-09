@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdlib>
 
 int main(){
     int arr[5][5];
