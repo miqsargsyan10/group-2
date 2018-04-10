@@ -42,5 +42,5 @@ int main(){
             std::cout << arr[i] << " ";
         }
     }
-    std::cout << "]";
+    std::cout << "] \n";
 }
