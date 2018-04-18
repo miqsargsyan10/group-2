@@ -23,13 +23,46 @@ class Point{
         double getY() {
             return y;
         }
+	void foo () {
+	    std::cout << "This is Point! FOO" << std::endl;
+	}
+        void virtual boo () {
+	    std::cout << "This is Point! BOO" << std::endl;
+	}
+};
+
+class Circle: public Point {
+    private:
+        double r;
+    public:
+        Circle (double r, double x, double y): Point(x,y)
+        {
+            this->r = r;
+        }
+	Circle (const Circle &object): Point(object)
+	{
+	    r = object.r;
+	}
+	~Circle(){}
+        void setR (double r) {
+            this->r = r;
+        }
+        double getR () {
+            return r;
+        }
+        double getS () {
+            return r * r * M_PI;
+        }
+	double getL() {
+	    return r * 2 * M_PI;
+	}
 };
 
 class Rectangle: public Point{
     private:
         double h, w;
     public:
-        Rectangle ( double height, double width, double x, double y ):Point (x, y) {
+        Rectangle ( double height, double width, double x = 0, double y = 0 ):Point (x, y) {
             h = height;
             w = width;
         }
@@ -56,6 +89,12 @@ class Rectangle: public Point{
         void setW( double width ) {
             w = width;
         }
+	void foo () {
+	    std::cout << "This is Rectangle! FOO" << std::endl;
+	}
+        void boo () {
+	    std::cout << "This is Rectangle! BOO" << std::endl;
+	}
 };
 
 class Triangle: public Point{
@@ -109,6 +148,10 @@ class Sector: public Point {
             this->x2 = x2;
             this->y2 = y2;
         }
+	Sector( const Sector &object ): Point(object) {
+	    x2 = object.x2;
+	    y2 = object.y2;
+	}
         ~Sector(){}
         void setX2( double x2) {
             this->x2 = x2;
@@ -126,7 +169,7 @@ class Sector: public Point {
             double x1 = getX(), y1 = getY();
             double k = ( y2 - y1 ) / ( x2 - x1 );
             double b = y1 - k * x1;
-            for(int x = x1; x <= x2 ; x += 1) {
+            for( int x = x1; x <= x2 ; x += 1 ) {
                 std::cout << "If x = " << x << std::endl;
                 std::cout << "Y = " << k * x + b << std::endl;
             }
