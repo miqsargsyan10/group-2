@@ -146,7 +146,7 @@ class Sector: public Point {
     public:
         Sector( Point a, Point b ): Point(a), b(b) {}
         ~Sector(){}
-        void printXY(){ 
+        void printXY(){
             double x1 = getX(), y1 = getY(), x2 = b.getX(), y2 = b.getY();
             double k = ( y2 - y1 ) / ( x2 - x1 );
             double b = y1 - k * x1;

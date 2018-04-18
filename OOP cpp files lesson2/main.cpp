@@ -1,12 +1,12 @@
 #include <iostream>
-#include "classes.cpp"
+#include "stack.cpp"
 
 int main () {
     Point x(0.0, 0.0);
     Point z(16.0, 12.1);
     Sector i( x, z );
     i.printXY();
-    std::cout << "----------------------\n"; 	
+    std::cout << "----------------------\n";
     Rectangle b(10, 5, 2, 0);
     std::cout << "S = " << b.getS() << std::endl;
     std::cout << "P = " << b.getP() << std::endl;
