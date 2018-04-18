@@ -2,8 +2,10 @@
 #include "classes.cpp"
 
 int main () {
-    Sector a( 0.0, 0.0, 16.0, 12.1 );
-    a.printXY();
+    Point x(0.0, 0.0);
+    Point z(16.0, 12.1);
+    Sector i( x, z );
+    i.printXY();
     std::cout << "----------------------\n"; 	
     Rectangle b(10, 5, 2, 0);
     std::cout << "S = " << b.getS() << std::endl;
@@ -11,7 +13,7 @@ int main () {
     std::cout << "H = " << b.getH() << std::endl;
     std::cout << "W = " << b.getW() << std::endl;
     std::cout << "----------------------\n";
-    Rectangle rectangle(10, 20, 0, 0);
+    Rectangle rectangle(10.0, 20.0, 0.0, 0.0);
     Rectangle* newRectangle = &rectangle;
     std::cout << "Surface of rectangle is " << (*newRectangle).getS() << std::endl;
     std::cout << "Perimeter of rectangle is " << newRectangle->getP() << std::endl;

@@ -142,31 +142,12 @@ class Triangle: public Point{
 
 class Sector: public Point {
     private:
-        double x2, y2;
+        Point b;
     public:
-        Sector( double x1, double y1, double x2, double y2 ): Point(x1, y1) {
-            this->x2 = x2;
-            this->y2 = y2;
-        }
-	Sector( const Sector &object ): Point(object) {
-	    x2 = object.x2;
-	    y2 = object.y2;
-	}
+        Sector( Point a, Point b ): Point(a), b(b) {}
         ~Sector(){}
-        void setX2( double x2) {
-            this->x2 = x2;
-        }
-        void setY2( double y2) {
-            this->y2 = y2;
-        }
-        double getX2() {
-            return x2;
-        }
-        double getY2() {
-            return y2;
-        }
-        void printXY(){
-            double x1 = getX(), y1 = getY();
+        void printXY(){ 
+            double x1 = getX(), y1 = getY(), x2 = b.getX(), y2 = b.getY();
             double k = ( y2 - y1 ) / ( x2 - x1 );
             double b = y1 - k * x1;
             for( int x = x1; x <= x2 ; x += 1 ) {
