@@ -1,34 +1,36 @@
 #include <iostream>
 
-class stackClass {
+class Stack {
     private:
-        unsigned int top, sizeStack, popNumber;
-        int arr[10];
+        int top, sizeStack, *arr, n;
+    public:
+        Stack (unsigned int n)
+        {
+            top = -1;
+            sizeStack = 0;
+            this->n = n;
+            arr = new int [n];
+            std::cout << "Hello\n";
+        }
+        ~Stack () {
+            delete [] arr;
+            std::cout << "Bye bye\n";
+        }
         int sizeArr(){
             return sizeStack;
         }
-    public:
-        stackClass ()
-            :top(0),
-            sizeStack(0)
-        {
-            std::cout << "Hello\n";
-        }
-        ~stackClass () {
-            std::cout << "Bye bye\n";
-        }
         void push ( int number ) {
-            if ( sizeStack < 10 ) {
+            if ( sizeStack < n ) {
+                top = sizeStack;
                 arr[top] = number;
                 sizeStack++;
-                top = sizeStack;
             } else {
                 std::cout << "Sorry but stack is full!!\n";
             }
         }
         int pop () {
             if ( sizeArr() > 0 ) {
-                popNumber = arr[top];
+                int popNumber = arr[top];
                 arr[top] = 0;
                 top--;
                 sizeStack = top;
