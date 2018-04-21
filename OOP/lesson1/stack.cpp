@@ -21,28 +21,24 @@ class Stack {
         }
         void push ( int number ) {
             if ( sizeStack < n ) {
-                top = sizeStack;
+                top = sizeStack++;
                 arr[top] = number;
-                sizeStack++;
             } else {
                 std::cout << "Sorry but stack is full!!\n";
             }
         }
-        int pop () {
+        void pop () {
             if ( sizeArr() > 0 ) {
                 int popNumber = arr[top];
                 arr[top] = 0;
-                top--;
                 sizeStack = top;
-                return popNumber;
+                top--;
+                std::cout << "Removed integer is " << popNumber << std::endl;
             } else {
                 std::cout << "Sorry but stack is empty!!\n";
             }
         }
         bool isEmpty () {
-            if ( sizeArr() == 0 ) {
-                return true;
-            }
-            return false;
+            return !(sizeArr());
         }
 };
