@@ -1,5 +1,5 @@
 #include <iostream>
-#include "stack.cpp"
+#include "stack.h"
 
 int main(){
     unsigned int n;
