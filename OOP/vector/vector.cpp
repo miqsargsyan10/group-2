@@ -12,7 +12,7 @@ Vector::~Vector () {
     std::cout << "Byeeeeeeeeeeeeeee\n";
 }
 
-Vector::erace (int m) {
+int* Vector::erace (int m) {
     int* arr = new int[m];
     if (m < length) {
         for (int i = 0; i < m; i++) {
@@ -27,14 +27,14 @@ Vector::erace (int m) {
     return arr;
 }
 
-Vector::operator[] (int index) {
+int& Vector::operator[] (int index) {
     if (index > length){
         std::cout << "Bla bla bla\n";
     }
     return _arr[index];
 }
 
-Vector::findVector (int a) {
+int Vector::findVector (int a) {
     for ( int i = 0; i < length; i++ ) {
         if (_arr[i] == a) {
             return i;
@@ -43,10 +43,10 @@ Vector::findVector (int a) {
     return -1;
 }
 
-Vector::resizeVector (unsigned int n) {
+void Vector::resizeVector (unsigned int n) {
     int m = n * 2;
     if (m == length) {
-        return 0;
+        return;
     } else if (m < length) {
         _arr = erace(m);
         length = m;
@@ -56,24 +56,26 @@ Vector::resizeVector (unsigned int n) {
     }
 }
 
-Vector::shift (int m) {
+void Vector::shift (int m) {
     for (int i = length; i > m; i--) {
         _arr[i] = _arr[i-1];
     }
 }
 
-Vector::insertVector (int index, int c) {
+void Vector::insertVector (int index, int c) {
     shift(index);
     _arr[index] = c;
 }
 
-Vector::shiftRemove (int m) {
-    for (int i = m; i < length - 1; i++) {
+void Vector::shiftRemove (int m) {
+    int i = m;
+    while (i < length - 1) {
         _arr[i] = _arr[i+1];
+	i++;
     }
     _arr[i] = 0;
 }
 
-Vector::removeVector (int index) {
+void Vector::removeVector (int index) {
     shiftRemove(index);
 }

@@ -13,7 +13,7 @@ Queue::~Queue () {
     std::cout << "Byeeeeeeeeeeeeeee\n";
 }
 
-Queue::push (int a) {
+void Queue::push (int a) {
     if (length < n) {
         _arr[n - ++length] = a;
     } else {
@@ -21,7 +21,7 @@ Queue::push (int a) {
     }
 }
 
-Queue::pop () {
+void Queue::pop () {
     if (length > 0) {
         int i = n - 1;
         std::cout << "Pop number is " << _arr[i] << std::endl;
@@ -36,10 +36,10 @@ Queue::pop () {
     }
 }
 
-Queue::size () {
+int Queue::size () {
     return length;
 }
 
-Queue::isEmpty() {
+bool Queue::isEmpty() {
     return !(length);
 }

@@ -12,10 +12,10 @@ Stack::~Stack () {
     delete [] arr;
     std::cout << "Bye bye\n";
 }
-Stack::sizeArr () {
+int Stack::sizeArr () {
     return sizeStack;
 }
-Stack::push ( int number ) {
+void Stack::push ( int number ) {
     if ( sizeStack < n ) {
         top = sizeStack++;
         arr[top] = number;
@@ -23,7 +23,7 @@ Stack::push ( int number ) {
         std::cout << "Sorry but stack is full!!\n";
     }
 }
-Stack::pop () {
+void Stack::pop () {
     if ( sizeArr() > 0 ) {
         int popNumber = arr[top];
         arr[top] = 0;
@@ -34,6 +34,6 @@ Stack::pop () {
         std::cout << "Sorry but stack is empty!!\n";
     }
 }
-Stack::isEmpty () {
+bool Stack::isEmpty () {
     return !(sizeArr());
 }
