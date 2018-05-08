@@ -1,0 +1,25 @@
+exercise 4:
+    grep -r "text for search" | sort > result
+exercise 5:
+    sudo addgroup group1
+    sudo addgroup group2
+    sudo addgroup group3
+    sudo adduser user1
+    sudo adduser user2
+    sudo adduser user3
+    sudo usermod -a -G group1,group3 user1
+    sudo usermod -a -G group1,group2,group3 user2
+    sudo usermod -a -G group2,group3 user3
+    mkdir folder2 folder1
+    sudo chown user1:group1 folder1
+    sudo chown user2:group2 folder2
+    sudo chmod 774 folder1
+    sudo chmod 665 folder2
+exercise 1:
+    free -h
+    sudo dd if=/dev/sda6 of=/media/swapfile.img bs=1024 count=1M
+    sudo chmod 600 /media/swapfile.img
+    sudo mkswap /media/swapfile.img
+    sudo vim /etc/fstab
+    Added - /media/swapfile.img swap swap sw 0 0
+    sudo swapon /media/swapfile.img
