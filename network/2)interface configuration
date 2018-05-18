@@ -1,0 +1,35 @@
+1. Verify whether dhclient is running.
+    ps ax | grep dhclient
+2. Display your current ip address(es).
+    ifconfig
+3. Display the configuration file where this ip address is defined.
+    cat /etc/network/interfaces
+4. Follow the nic configuration in the book to change your ip address from dhcp client to fixed. Keep the same ip address to avoid conflicts!
+    sudo vim /etc/network/interfaces
+
+    # interfaces(5) file used by ifup(8) and ifdown(8)
+    auto lo
+    iface lo inet loopback
+
+    auto  eth0
+    iface eth0 inet static
+    address   172.20.51.62
+    broadcast 172.20.51.255
+    netmask   255.255.255.0
+    gateway   172.20.51.1
+5. Did you also configure the correct gateway in the previous question ? If not, then do this now.
+    gateway 172.20.51.1
+6. Verify that you have a gateway.
+    route
+7. Verify that you can connect to the gateway, that it is alive.
+    ping 172.20.51.1
+8. Change the last two digits of your mac address.
+    sudo ifconfig enp2s0 hw ether d4:3d:7e:b3:47:bb
+9. Which ports are used by http, pop3, ssh, telnet, nntp and ftp ?
+    cat /etc/services | grep ftp
+10. Explain why e-mail and websites are sent over tcp and not udp.
+    tcp֊ն udp֊ից տարբերվում է նրանով, որ tcp֊ն ինֆորմացիայի կորուստ թույլ չի տալիս, իտարբերություն udp֊ի։ Իսկ քանի որ Էլ․ փոստը տվյալների կորուստ չպիտի ունենա, այդ իսկ պատճառով էլ օգտագործում են tcp֊ն։
+11. Display the hostname of your computer.
+    hostname
+12. Which ip-addresses did your computer recently have contact with ?
+    arp -a
