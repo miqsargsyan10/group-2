@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+#header {
+    width: 100vw;
+    height: 6vh;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ul li {
+    float: left;
+    width: 20vw;
+    height: 6vh;
+    background: rgb(40, 226, 40);
+    opacity: 0.7;
+    line-height: 40px;
+    text-align: center;
+    font-size: 5vh;
+    color: white;
+    display: inline-block;
+}
+#ul>li:not(:last-child) {
+    border-right: 2px solid red;
+}
+ul li a {
+    text-decoration: none;
+    display: block;
+    color: white;
+}
+ul li a:hover {
+    background-color: red;
+    cursor: pointer;
+}
+ul li ul li {
+    display: none;
+}
+ul li:hover ul li {
+    display: block;
+    opacity: 1;
+}
+#container {
+    width: 100vw;
+    height: 84vh;
+    background-image: url('https://wallpaperscute.com/wallpaper-fifa-world-cup-2573/wallpaper-fifa-world-cup/');
+    background-size: cover;
+}
+#divLog {
+    width: 25vw;
+    height: 55vh;
+    background: black;
+    opacity: 0.6;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 35px;
+}
+#divLog h1 {
+    text-align: center;
+}
+#divLog p {
+    margin-left: 10%;
+    font-size: 100%
+}
+.input {
+    margin-left: 10%;
+    display: block;
+    border: none;
+    border-bottom: 2px solid white;
+    background: transparent;
+    color: white;
+    outline: none;
+    width: 80%;
+    height: 7%;
+}
+#box {
+    margin-left: 10%;
+    margin-top: 2%;
+}
+#forgot {
+    text-decoration: none;
+    color: white;
+    font-size: 100%;
+}
+#divLog:hover {
+    opacity: 0.9;
+}
+#submit {
+    cursor: pointer;
+    width: 40%;
+    height: 10%;
+    border-radius: 20px;
+    background: red;
+    border: none;
+    margin-left: 50%;
+    margin-top: 5%;
+}
+#footer {
+    width: 100vw;
+    height: 10vh;
+    background: rgb(40, 226, 40);
+    opacity: 0.7;
+}
+#footer h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+}
