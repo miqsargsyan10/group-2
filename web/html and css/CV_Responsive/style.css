@@ -1,0 +1,215 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+#divBack {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('photos/image.jpg');
+    background-size: 100vw 100vh;
+    position: relative;
+}
+#divBack>img {
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.3;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#divBack button {
+    position: absolute;
+    background: green;
+    width: 250px;
+    height: 50px;
+    border-radius: 15px;
+    font-size: 30px;
+    margin: 0 auto;
+    cursor: pointer;
+    border: none;
+    z-index: 1;
+    color: white;
+}
+#divBack button:hover {
+    background: #1ed220;
+    letter-spacing: 3px;
+    transform: scale(1.1);
+}
+#divButton {
+    position: relative;
+    margin-top: 10%;
+    margin-left: calc(50% - 200px);
+    width: 200px;
+}
+#cv img {
+    width: 150px;
+    height: 200px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    z-index: 100;
+}
+#cvArea {
+    width: 35vw;
+    height: 100vh;
+    display: inline-block;
+    float: left;
+}
+#cv {
+    position: relative;
+    width: 300px;
+    height: 500px;
+    margin-left: 10%;
+    margin-top: 30%;
+}
+#cv1 {
+    margin-left: 15%;  
+}
+#cv2 {
+    margin-top: 15%;
+}
+#cv3 {
+    margin-left: 53%;
+    margin-top: 20%;
+}
+#cv4 {
+    margin-left: 20%;
+    margin-top: 40%;
+}
+#textArea {
+    display: inline-block;
+    width: 50vw;
+    height: 100vh;
+}
+#text {
+    position: relative;
+    width: 100%;
+    margin-top: 30%;
+    margin-left: 10%;
+}
+#divContainer {
+    height: 300px;
+    background: #d3dfd7;
+    position: relative;
+}
+#user1, #user2, #user3 {
+    margin: 0px;
+    padding-top: 10px;
+    position: relative;
+    width: 25vw;
+    height: 300px;
+    display: inline-block;
+}
+.users {
+    margin: 0px;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    font-size: 60px;
+    color: blue;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+    border: 2px solid blue;
+    border-radius: 200px;
+}
+.uspan {
+    margin-left: calc(50% - 60px);
+    text-align: center;
+    color: blue;
+    font-size: 60px;
+}
+#user0 {
+    width: 13vw;
+    float: left;
+    margin: 0;
+    position: relative;
+    height: 300px;
+    display: inline-block;
+}
+#divFooter{
+    height: 500px;
+    background: #ebf5fb;
+}
+#footer1 {
+    height: 250px;
+}
+#footer2 {
+    height: 250px;
+}
+#photoFooter11, #photoFooter12, #photoFooter13, #photoFooter21, #photoFooter22 {
+    width: 25vw;
+    margin: 0;
+    position: relative;
+    height: 250px;
+    display: inline-block;
+}
+#photoFooter14, #photoFooter23 {
+    width: 22vw;
+    margin: 0;
+    position: relative;
+    height: 250px;
+    display: inline-block;
+}
+#photoFooter10 {
+    width: 13vw;
+    margin: 0;
+    position: relative;
+    height: 250px;
+    display: none;
+}
+#photoFooter20 {
+    width: 13vw;
+    margin: 0;
+    position: relative;
+    height: 250px;
+    display: inline-block;
+}
+.photos1 {
+    position: absolute;
+    border: 4px solid orange;
+    width: 170px;
+    height: 170px;
+    border-radius: 150px;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -100%);
+}
+.photos2 {
+    position: absolute;
+    border: 4px solid orange;
+    width: 170px;
+    height: 170px;
+    border-radius: 150px;
+    left: 50%;
+    top: 0%;
+    transform: translate(-50%, 0%);
+}
+@media screen and (max-width: 500px) {
+    #cvArea, #user3, #photoFooter14, #photoFooter23 {
+        display: none;
+    }
+    #textArea {
+        width: 90vw;
+    }
+    #divButton {
+        margin-left: 10%;
+    }
+}
+@media screen and (max-width: 1024px) {
+    #cvArea, #photoFooter14 {
+        display: none;
+    }
+    #photoFooter10 {
+        display: inline-block;
+    }
+    #textArea {
+        width: 90vw;
+    }
+    #divButton {
+        margin-left: 10%;
+    }
+}
