@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    overflow-x: hidden;
+}
+#startDiv {
+    width: 100vw;
+    height: 100vh;
+}
+#headerStartDiv {
+    display: flex;
+    width: 100%;
+    height: 4%;
+    background: gray;
+    justify-content: space-between;
+}
+#infoDiv {
+    width: 40%;
+    height: 100%;
+    margin-left: 5%;
+}
+#contactDiv {
+    width: 13%;
+    height: 100%;
+    margin-right: 5%;
+}
+#contactDiv, #infoDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+#headerStartDiv p {
+    color: white;
+    font-size: 15px;
+}
+#infoDiv img {
+    height: 100%;
+    width: 4%; 
+}
+#contactDiv a {
+    width: 10%;
+    height: 60%;
+}
+#contactDiv a  img {
+    width: 100%;
+    height: 100%;
+}
+#divBack {
+    height: 56vh;
+    width: 100vw;
+    background-image: url('images/martouni.jpg');
+    background-size: 100vw 56vh;
+}
+#divBack img {
+    height: 100%;
+    width: 100%;
+    opacity: 0.3;
+}
+#text {
+    position: absolute;
+    width: 400px;
+    height: 60px;
+    left: calc(50% - 200px);
+    top: 10vh;
+}
+#text h1, #text p {
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+#footerStart {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100vw;
+    height: 40vh;
+}
+#divForDiv {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    height: 150px;
+    top: calc(60vh - 75px);
+}
+#box1, #box2, #box3 {
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+    background: rgb(21, 88, 187);
+}
+#divForDiv img {
+    margin-top: 25px;
+    margin-left: 25px;
+    display: block;
+    width: 100px;
+    height: 100px;
+}
+#box1:hover, #box2:hover, #box3:hover {
+    background: rgb(16, 161, 209);
+    cursor: pointer;
+}
+#flex1, #flex2, #flex3 {
+    width: 30vw;
+    height: 40vh;
+    text-align: center;
+}
+#footerStart h1 {
+    margin-top: 80px;
+}
+#conteiner1 {
+    background: rgb(131, 209, 235);
+    width: 100vw;
+    height: 600px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+#cont1 {
+    margin-top: 10px;
+    width: 20%;
+    height: 100%;
+}
+#cont2 {
+    width: 60%;
+    height: 100%;
+}
+#cont2>div {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    float: right;
+    margin-top: 50px;
+    margin-right: 200px;
+}
+#p2 {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
