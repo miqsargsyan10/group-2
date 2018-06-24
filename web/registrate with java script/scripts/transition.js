@@ -1,0 +1,83 @@
+function changeView() {
+    var name = $("#nameIs").val();
+    var surname = $("#surnameIs").val();
+    var genderVal = $("input:radio[name='gender']:checked").val();
+    $("body").empty();
+    var div = $("<div/>").appendTo("body");
+    div.attr("id","header");
+    var h1 = $("<h1/>").appendTo("#header");
+    var str1 = "Hi, mr. ";
+    var str2 = "Hi, mrs. ";
+    var str0 = " ";
+    if (genderVal == "male") {
+        h1.text(str1.concat(name, str0, surname));
+    } else {
+        h1.text(str2.concat(name, str0, surname));
+    }
+    var div = $("<div/>").appendTo("body");
+    div.attr("id","container");
+    var div = $("<div/>").appendTo("#container");
+    div.attr("id","infoMan");
+    var div = $("<div/>").appendTo("#infoMan");
+    div.attr("id","addresMan");
+    var input = $("<input/>").appendTo("#addresMan");
+    input.attr("type","text");
+    input.attr("placeholder","Addres");
+    var div = $("<div/>").appendTo("#infoMan");
+    div.attr("id","cityMan");
+    var input = $("<input/>").appendTo("#cityMan");
+    input.attr("type","text");
+    input.attr("placeholder","City");
+    var div = $("<div/>").appendTo("#infoMan");
+    div.attr("id","countryMan");
+    var input = $("<input/>").appendTo("#countryMan");
+    input.attr("type","text");
+    input.attr("placeholder","Country");
+    var div = $("<div/>").appendTo("#infoMan");
+    div.attr("id","phoneMan");
+    var input = $("<input/>").appendTo("#phoneMan");
+    input.attr("type","text");
+    input.attr("placeholder","Phone");
+    var div = $("<div/>").appendTo("#infoMan");
+    div.attr("id","nameMan");
+    var input = $("<input/>").appendTo("#nameMan");
+    input.attr("type","text");
+    input.attr("placeholder","Name");
+    var div = $("<div/>").appendTo("#infoMan");
+    div.attr("id","surnameMan");
+    var input = $("<input/>").appendTo("#surnameMan");
+    input.attr("type","text");
+    input.attr("placeholder","Surname");
+    var button = $("<button/>").appendTo("#container");
+    button.text("Save");
+    button.attr("id","saveInfo");
+    var div = $("<div/>").appendTo("#container");
+    div.attr("id","people");
+    var name = "Name: ";
+    var surname = "Surname: ";
+    var country = "Country: ";
+    var city = "City: ";
+    var addres = "Addres: ";
+    var phone = "Phone: ";
+    function saveProcess () {
+        var div = $("<div/>").appendTo("#people");
+        div.attr("class","manN");
+        var h1 = $("<h1/>").appendTo(div);
+        h1.text(name.concat($("#nameMan input").val()));
+        var h1 = $("<h1/>").appendTo(div);
+        h1.text(surname.concat($("#surnameMan input").val()));
+        var h1 = $("<h1/>").appendTo(div);
+        h1.text(country.concat($("#countryMan input").val()));
+        var h1 = $("<h1/>").appendTo(div);
+        h1.text(city.concat($("#cityMan input").val()));
+        var h1 = $("<h1/>").appendTo(div);
+        h1.text(addres.concat($("#addresMan input").val()));
+        var h1 = $("<h1/>").appendTo(div);
+        h1.text(phone.concat($("#phoneMan input").val()));
+    }
+    document.getElementById('saveInfo').onclick = saveProcess;
+    var div1 = $("<div/>").appendTo("body");
+    div1.attr("id","footer");
+    var h11 = $("<h1/>").appendTo("#footer");
+    h11.text("Web site created by Michael Sargsyan");
+}
