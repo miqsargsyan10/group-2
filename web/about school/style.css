@@ -16,10 +16,24 @@ body {
     background: gray;
     justify-content: space-between;
 }
+i {
+    font-size: 25px;
+    color: white;
+}
 #infoDiv {
     width: 40%;
     height: 100%;
     margin-left: 5%;
+}
+#infoDiv div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 1vw;
+}
+#infoDiv i {
+    margin-right: 0.5vw;
 }
 #contactDiv {
     width: 13%;
@@ -36,23 +50,24 @@ body {
     color: white;
     font-size: 15px;
 }
-#infoDiv img {
-    height: 100%;
-    width: 4%; 
-}
 #contactDiv a {
-    width: 10%;
-    height: 60%;
-}
-#contactDiv a  img {
-    width: 100%;
+    width: 50%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-decoration-line: none;
+}
+#contactDiv i {
+    font-size: 4vh;
 }
 #divBack {
     height: 56vh;
     width: 100vw;
     background-image: url('images/martouni.jpg');
-    background-size: 100vw 56vh;
+    background-size: 100vw 60vh;
+    background-attachment: fixed;
 }
 #divBack img {
     height: 100%;
@@ -114,7 +129,7 @@ body {
 #conteiner1 {
     background: rgb(131, 209, 235);
     width: 100vw;
-    height: 600px;
+    height: auto;
     display: flex;
     justify-content: space-around;
     flex-direction: row;
@@ -135,9 +150,155 @@ body {
     float: right;
     margin-top: 50px;
     margin-right: 200px;
+    margin-bottom: 50px; 
 }
 #p2 {
     position: absolute;
     top: 100px;
     left: 100px;
+}
+#conteiner2 {
+    width: 100vw;
+    height: auto;
+    text-align: center;
+}
+#conteiner2 h1 {
+    font-size: 4vw;
+}
+#conteiner2>p {
+    margin: 0 15%;
+    font-size: 1.5vw;
+}
+#mainCont {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+.mainDiv {
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgb(221, 215, 215);
+    width: 40%;
+    margin: 2.5% 0;
+    min-width: 370px;
+}
+.mainDiv i {
+    width: 100px;
+    height: 100px;
+    border: 2px solid orange;
+    border-radius: 2000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: orange;
+    margin: auto 2.5%;
+    font-size: 5vh;
+}
+.icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+.contText {
+    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 5%;
+    margin-left: 0;
+}
+.contText h2 {
+    font-size: 100%;
+    color: orange;
+}
+.contText p {
+    font-size: 100%;
+}
+#conteiner3 {
+    width: 100vw;
+    height: auto;
+    text-align: center;
+}
+#cont3 {
+    display: flex;
+    width: 100vw;
+    height: auto;
+    justify-content: space-around;
+}
+#conteiner3>h1 {
+    font-size: 4vw;
+    margin-top: 10%;
+}
+#conteiner>p {
+    margin: 0 15%;
+    font-size: 1.5vw;
+}
+#cont3>div {
+    border: 1px solid rgb(221, 215, 215);
+    width: 30vw;
+    height: auto;
+    margin-bottom: 30px;
+}
+#cont3 i {
+    margin: 4% 0;
+    font-size: 5vh;
+    color: blue;
+}
+#cont3 img {
+    border-radius: 150px;
+}
+#conteiner4 {
+    width: 100vw;
+    height: auto;
+    padding: 100px;
+    background-image: url('images/back.png');
+    background-size: 100vw auto;
+    background-attachment: fixed;
+}
+#conteiner4>h1, #conteiner4>h3 {
+    color: white;
+    text-align: center;
+}
+#sendMessage {
+    width: 40vw;
+    height:  auto;
+    background: white;
+    opacity: 0.8;
+    margin: auto;
+    padding: 5%;
+    border-radius: 30px;
+}
+#sendMessage input, #sendMessage textarea {
+    height: 30px;
+    width: 90%
+}
+#sendMessage button {
+    background: green;
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    height: 40px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    float: right;
+    margin-right: 5%;
+}
+#sendMessage button:hover {
+    cursor: pointer;
+}
+#footer {
+    width: 100vw;
+    height: auto;
+    color: gray;
+    text-align: center;
+}
+@media screen and (max-width: 600px) {
+    .mainCont {
+        flex-direction: column;
+    }
 }
