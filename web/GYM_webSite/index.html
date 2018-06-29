@@ -3,127 +3,197 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.css">
         <link rel="stylesheet" href="bootstrap-4.1.1-dist/css/bootstrap.css">
-        <link rel="stylesheet" href="css/style.css">
-        <title>GYM web site</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Document</title>
     </head>
     <body>
         <div id="mainDiv">
-            <div id="trainMe">
-                <span id="train">Train</span>
-                <span id="me">Me</span>
-            </div>
-            <div id="logUp">
-                <div id="login">
-                    <span>Login</span>
+            <div class="filter">
+                <div class="container">
+                    <div class="clearfix">
+                        <div class="float-left my-2">
+                            <p class="text-warning h2">Train<span class="h2 text-white">Me</span></p>
+                        </div>
+                        <div class="float-right my-2">
+                            <button class="btn btn-primary">Login</button>
+                            <button class="btn btn-success">Sign up</button>
+                        </div>
+                    </div>
+                    <div class="justify-content-center align-items-center row" style="margin-top:10%">
+                        <p class="h1 text-white">Never <span class="text-warning h1"> give up!</span></p>
+                    </div>
+                    <div class="justify-content-center align-items-center row">
+                        <p class="h1 text-white">Do it!</p>
+                    </div>
+                    <div class="row justify-content-center align-items-center" id="textWorksForYou">
+                        <h4 class="text-white">How it works for you</h4>
+                    </div>
+                    <a href="#textInfo">
+                    <div class=" row justify-content-center align-items-center square" id="icon">
+                        <div class="rounded-circle border border-white media px-2 py-2" id="worksForYou">
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                    </div>
+                    </a>
+                    <hr>
                 </div>
-                <div id="signup">
-                    <span>SignUp</span>
-                </div>
             </div>
-            <div id="mainText">
-                <h1>Never <span>give up!</span></h1>
-                <h1>Do it!</h1>
-            </div>
-            <div id="download">
-                <p>How it works for you</p>
-                <div id="iconDownload">
-                    <i class="fa fa-angle-double-down"></i>
-                </div>
-            </div>
-            <img src="images/mainDivImg.jpg" id="filter">
         </div>
-        <div id="staffDiv">
-            <div id="miniStaffDiv">
-                <h1>HOW IT WORKS FOR YOU</h1>
-                <div id="flexStaff">
-                    <div class="flexMini">
-                        <img src="images/khabib.jpg">
-                        <div class="staffAs">
-                            <span>GROUP EXERCISE TRAINER</span>
-                        </div>
-                        <ol type="1">
-                            <li>Build a personal profile.</li>
-                            <li>Increase value in your sevice.</li>
-                            <li>Build a schedule that is convenient to you.</li>
-                            <li>Acces to additional revenue at your fingertips.</li>
-                        </ol>
-                    </div>
-                    <div class="flexMini">
-                        <img src="images/conor.jpg">
-                        <div class="staffAs">
-                            <span>CLUB MANAGER</span>
-                        </div>
-                        <ol type="1">
-                            <li>Build a personal profile.</li>
-                            <li>Increase value in your sevice.</li>
-                            <li>Decrease the time management spends looking for quality instructors.</li>
-                            <li>Acces to top rated instructors in your area.</li>
-                        </ol>
-                    </div>
-                    <div class="flexMini">
-                        <img src="images/mihran.jpg">
-                        <div class="staffAs">
-                            <span>GROUP USER</span>
-                        </div>
-                        <ol type="1">
-                            <li>Search our database for the top rated instructors, classes and clubs in your area.</li>
-                        </ol>
-                    </div>
+        <div class="container">
+            <h1 class="text-info" id="textInfo">How it works for you</h1>
+            <div class="row justify-content-between">
+                <div class="divX col-md-3">
+                    <img src="images/conor.jpg" style="width: 100%;">
+                    <ol type="1">
+                        <li>Build a personal profile</li>
+                        <li>Increase value in your service</li>
+                        <li>Build a schedule that is convenient to you</li>
+                        <li>Access to additional revenue at your fingertips</li>
+                    </ol>
+                </div>
+                <div class="divX col-md-3">
+                    <img src="images/khabib.jpg" style="width: 100%;">
+                    <ol type="1">
+                        <li>Build a personal profile</li>
+                        <li>Increase value in your service</li>
+                        <li>Decrease the time management spends looking for quality instructors</li>
+                        <li>Access to top rated instructors in your area</li>
+                    </ol>
+                </div>
+                <div class="divX col-md-3">
+                    <img src="images/mihran.jpg" style="width: 100%;">
+                    <ol type="1">
+                        <li>Search your database for the top rated instructors, classes and clubs in your area</li>
+                    </ol>
                 </div>
             </div>
         </div>
         <div id="cause">
-            <div id="causeMini">
-                <h1 class = "orangeText">WHY CHOOSE US</h1>
-                <p class = "orangeText">Why choose us</p>
-                <p class="whiteText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, officia quo illum
-                aspernatur unde asperiores quibusdam reiciendis mollitia! Est unde voluptates dolores
-                facere sapiente ipsa possimus magni accusantium, nobis pariatur. 
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, officia quo illum
-                aspernatur unde asperiores quibusdam reiciendis mollitia! Est unde voluptates dolores
-                facere sapiente ipsa possimus magni accusantium, nobis pariatur.</p>
-                <ul style="list-style-type:circle">
-                    <li class="whiteText">Lorem ipsum</li>
-                    <li class="whiteText">Lorem ipsum</li>
-                    <li class="whiteText">Lorem ipsum</li>
-                    <li class="whiteText">Lorem ipsum</li>
-                </ul>
-            </div>
-            <img src="images/mainDivImg.jpg" id="filter2">
-        </div>
-        <div id="coaches">
-            <h1>OUR COACHES</h1>
-            <div id="coachesMini">
-                <div class="flexCoach">
-                    <img src="images/floyd.jpg">
+            <div class="filter">
+                <hr>
+                <div class="container" id="causeMini">
+                    <h1 class = "text-warning">WHY CHOOSE US</h1>
+                    <p class = "text-warning">Why choose us</p>
+                    <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, officia quo illum
+                    aspernatur unde asperiores quibusdam reiciendis mollitia! Est unde voluptates dolores
+                    facere sapiente ipsa possimus magni accusantium, nobis pariatur. 
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, officia quo illum
+                    aspernatur unde asperiores quibusdam reiciendis mollitia! Est unde voluptates dolores
+                    facere sapiente ipsa possimus magni accusantium, nobis pariatur.</p>
+                    <ul style="list-style-type:circle">
+                        <li class="text-white">Lorem ipsum</li>
+                        <li class="text-white">Lorem ipsum</li>
+                        <li class="text-white">Lorem ipsum</li>
+                        <li class="text-white">Lorem ipsum</li>
+                    </ul>
                 </div>
-                <div class="flexCoach">
-                    <img src="images/floyd.jpg">
-                </div>
-                <div class="flexCoach">
-                    <img src="images/floyd.jpg">
-                </div>
-                <div class="flexCoach">
-                    <img src="images/floyd.jpg">
-                </div>
-                <div class="flexCoach">
-                    <img src="images/floyd.jpg">
-                </div>
-                <div class="flexCoach">
-                    <img src="images/floyd.jpg">
-                </div>
-                <div class="flexCoach">
-                    <img src="images/floyd.jpg">
-                </div>
-                <div class="flexCoach">
-                    <img src="images/floyd.jpg">
-                </div>
+                <hr>
             </div>
         </div>
-        <div id="peopleSays">
-            
+        <div class="container">
+            <hr>
+            <h1 class="text-info" style="margin-top: 5%;">Our coaches</h1>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="media getInfo">
+                        <img src="images/floyd.jpg" style="width: 100%; margin-bottom: 5%;">
+                        <div class="getingInfo justify-content-center align-items-center">
+                            <div><h1 class="text-warning">Floyd</h1></div>
+                            <div><h1 class="text-warning">Mayweather</h1></div>
+                            <div><h1 class="text-warning">----</h1></div>
+                            <div class="bttn">
+                                <span>View Profile</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media getInfo">
+                        <img src="images/floyd.jpg" style="width: 100%; margin-bottom: 5%;">
+                        <div class="getingInfo justify-content-center align-items-center">
+                            <div><h1 class="text-warning">Floyd</h1></div>
+                            <div><h1 class="text-warning">Mayweather</h1></div>
+                            <div><h1 class="text-warning">----</h1></div>
+                            <div class="bttn">
+                                <span>View Profile</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="media getInfo">
+                        <img src="images/floyd.jpg" style="width: 100%; margin-bottom: 5%;">
+                        <div class="getingInfo justify-content-center align-items-center">
+                            <div><h1 class="text-warning">Floyd</h1></div>
+                            <div><h1 class="text-warning">Mayweather</h1></div>
+                            <div><h1 class="text-warning">----</h1></div>
+                            <div class="bttn">
+                                <span>View Profile</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media getInfo">
+                        <img src="images/floyd.jpg" style="width: 100%; margin-bottom: 5%;">
+                        <div class="getingInfo justify-content-center align-items-center">
+                            <div><h1 class="text-warning">Floyd</h1></div>
+                            <div><h1 class="text-warning">Mayweather</h1></div>
+                            <div><h1 class="text-warning">----</h1></div>
+                            <div class="bttn">
+                                <span>View Profile</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="media getInfo">
+                        <img src="images/floyd.jpg" style="width: 100%; margin-bottom: 5%;">
+                        <div class="getingInfo justify-content-center align-items-center">
+                            <div><h1 class="text-warning">Floyd</h1></div>
+                            <div><h1 class="text-warning">Mayweather</h1></div>
+                            <div><h1 class="text-warning">----</h1></div>
+                            <div class="bttn">
+                                <span>View Profile</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media getInfo">
+                        <img src="images/floyd.jpg" style="width: 100%; margin-bottom: 5%;">
+                        <div class="getingInfo justify-content-center align-items-center">
+                            <div><h1 class="text-warning">Floyd</h1></div>
+                            <div><h1 class="text-warning">Mayweather</h1></div>
+                            <div><h1 class="text-warning">----</h1></div>
+                            <div class="bttn">
+                                <span>View Profile</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="media getInfo">
+                        <img src="images/floyd.jpg" style="width: 100%; margin-bottom: 5%;">
+                            <div class="getingInfo justify-content-center align-items-center">
+                            <div><h1 class="text-warning">Floyd</h1></div>
+                            <div><h1 class="text-warning">Mayweather</h1></div>
+                            <div><h1 class="text-warning">----</h1></div>
+                            <div class="bttn">
+                                <span>View Profile</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media getInfo">
+                        <img src="images/floyd.jpg" style="width: 100%; margin-bottom: 5%;">
+                        <div class="getingInfo justify-content-center align-items-center">
+                            <div><h1 class="text-warning">Floyd</h1></div>
+                            <div><h1 class="text-warning">Mayweather</h1></div>
+                            <div><h1 class="text-warning">----</h1></div>
+                            <div class="bttn">
+                                <span>View Profile</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <hr>
         </div>
     </body>
 </html>

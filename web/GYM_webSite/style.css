@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+}
+#mainDiv {
+    background-image: url('https://i.ytimg.com/vi/I-hdhl2L7vM/maxresdefault.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+.filter {
+    background-color: rgba(0, 0, 0, 0.7)
+}
+#worksForYou:hover {
+    background: orange;
+    cursor: pointer;
+}
+#textWorksForYou {
+    margin-top: 8%; 
+    margin-bottom: 2%;
+}
+#icon {
+    font-size: 4vh; 
+    color: white;
+}
+#howWork li {
+    font-size: 1.15vw;
+    color: rgb(97, 97, 97)
+}
+#textInfo {
+    margin: 5% 0;
+}
+.divX {
+    border: 1px solid gray;
+    margin-bottom: 5%;
+    padding: 0;
+}
+a:link {
+    text-decoration: none;
+}
+#cause {
+    background-image: url('http://hdwallpaperbackgrounds.net/wp-content/uploads/2016/08/Gym-Wallpaper-2.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+#causeMini {
+    margin: 5% auto;
+}
+.getInfo {
+    position: relative;
+}
+.getingInfo {
+    position: absolute;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 95%;
+    border: 15px solid gray;
+    opacity: 0.8;
+    display: none;
+}
+.bttn {
+    position: relative;
+    width: 50%;
+    height: 15%;
+    border: 1px solid gray;
+    border-radius: 5px;
+    left: 25%;
+}
+.bttn span {
+    font-size: 3vh;
+    left: 0;
+    top: 0;
+    position: absolute;
+    color: white;
+}
+.getInfo:hover .getingInfo {
+    display: block;
+    cursor: pointer;
+}
